@@ -1,1 +1,23 @@
-Post-Turing machine interpreter written in Python
+# Post-Turing machine interpreter written in Python
+
+## Syntax
+
+See [ruwiki article on Post-Turing machine](https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D1%88%D0%B8%D0%BD%D0%B0_%D0%9F%D0%BE%D1%81%D1%82%D0%B0).
+
+A program is a text file with a list of lines.
+
+Lines starting with "#" are automatically skipped.
+
+Hereby $n$, $m$ mean positive integer numbers, denoting the line number of a command.
+
+* If such line doesn't exist, the program finishes. 
+* If a line starts with "#", interpreter skips until the first line that does not
+
+There are various commands:
+
+* `V n` -- mark the current cell and go to the $n$-th line of the program.
+* `X n` -- unmark the current cell and go to the $n$-th line of the program.
+* `L n` -- move to the left and go to the $n$-th line of the program.
+* `R n` -- move to the right and go to the $n$-th line of the program.
+* `? n m` -- if there is a mark in current cell, go to $n$-th line of the program, otherwise go to the $m$-th line
+* `!` -- end the program immediately
