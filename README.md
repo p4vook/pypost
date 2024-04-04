@@ -13,12 +13,12 @@ A program is interpreted as a series of commands, commands are whitespace (or ne
 
 ## Command reference
 
-Each command is a symbol `V`, `X`, `<`, `>`, `!` or `?`
+Each command is a symbol `1`, `0`, `<`, `>`, `!` or `?`
 
 There are 5 commands which take no arguments:
 
-* `V` -- mark current cell (if it is already marked, nothing will happen)
-* `X` -- erase the mark from current cell (if it isn't marked, nothing will happen)
+* `1` -- mark current cell (if it is already marked, nothing will happen)
+* `0` -- erase the mark from current cell (if it isn't marked, nothing will happen)
 * `<` -- move caret to the left
 * `>` -- move caret to the right
 * `!` -- end the program immediately
@@ -35,7 +35,7 @@ The program starts execution at the first command
 
 After processing command `!`, program stops execution immediately.
 
-After processing command `V`, `X`, `<` or `>`, the command that follows
+After processing command `1`, `0`, `<` or `>`, the command that follows
 immediately after it is processed.
 
 If no such command exists, the program ends execution (equivalent to `!`).
@@ -79,7 +79,7 @@ Another example: an empty program outputs its input.
 First of all, let's convert our program to a list of commands.
 
 We can assign a number to each command sequentially, then add an argument to commands
-`V`, `X`, `<`, `>`, equal to the sequentially next number after the number of a current command.
+`1`, `0`, `<`, `>`, equal to the sequentially next number after the number of a current command.
 
 `? n m` command can be replaced with `? N M`, where $N$ and $M$ are, respectedly,
 numbers of first commands starting from $n$-th line and from $m$-th line.
@@ -94,8 +94,8 @@ original program in this syntax, as can be easily seen from the control flow rul
 First of all, we replace each command number $n$ with a placeholder $p_n$ that refers to the
 command that was $n$-th.
 
-Then, we replace each command `V n`, `X n`, `< n` or `> n` with the command pairs
-(`V`, `? pn pn`), (`X`, `? pn pn`), (`<`, `? pn pn`), (`>`, `? pn pn`).
+Then, we replace each command `1 n`, `0 n`, `< n` or `> n` with the command pairs
+(`1`, `? pn pn`), (`0`, `? pn pn`), (`<`, `? pn pn`), (`>`, `? pn pn`).
 
 Afterwards, we put each command on a separate line and replace $p_n$ with the line number
 of a command that was originally $n$-th.

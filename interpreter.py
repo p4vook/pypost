@@ -85,9 +85,9 @@ while current_line < len(lines):
             current_line = (int(arg1) if cells[current_pos] else int(arg2)) - 1
             current_cmd = 0
             break
-        if cmd == "V":
+        if cmd == "1":
             mark()
-        elif cmd == "X":
+        elif cmd == "0":
             unmark()
         elif cmd == "<":
             move_left()
