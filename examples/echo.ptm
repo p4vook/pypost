@@ -1,0 +1,105 @@
+# this program doubles the input, storing it in the same way
+? 4 3
+! # if the input is empty, we should not do anything
+# write 00 to the left to stay safe
+< X < X > >
+# write additional 01 to the right to indicate current end
+? 8 10
+> >
+? 7 7
+> > X > X > X < < < < < <
+? 12 14
+< < 
+? 11 11
+> >
+# main program start
+# if we reached end, copy the final bit and stop
+? 18 72
+# check if current is 0 or 1
+>
+? 21 46
+# write 01 placeholder to current location 
+< X > >
+# go to the right and write 11, then put it back
+? 25 27
+> >
+? 24 24
+>
+? 31 29
+>
+? 24 24
+# we are at an actual end (01), write 1101
+< < V > > X > V < < <
+# return back until we get to the 01 placeholder
+? 35 37
+< <
+? 34 34
+>
+? 42 39
+# we are in 00, not 01
+<
+? 35 35
+# we found the placeholder, overwrite it to 11
+V > >
+# continue our cycle
+? 15 15
+# we need to copy 10
+# write 01 placeholder to current location 
+V < X > >
+# go to the right and write 10, then put it back
+? 51 53
+> >
+? 50 50
+>
+? 57 55
+>
+? 50 50
+# we are at an actual end (01), write 1001
+< < V > X > X > V < < <
+# return back until we get to the 01 placeholder
+? 61 65
+< <
+? 60 60
+>
+? 68 65
+# we are in 00, not 01
+<
+? 61 61
+# we found the placeholder, overwrite it to 10
+V > X >
+# continue our cycle
+? 15 15
+# we reached the end
+# go to the left until first bit
+< < 
+? 74 76
+> >
+# we are at a first bit
+# check if it is 1 or 0
+>
+? 81 88
+>
+? 83 85
+> >
+? 82 82
+# we reached the end, write 11
+V > V >
+? 94 94
+>
+? 90 92
+> >
+? 89 89
+# we reached the end, write 10
+V > X >
+# replace the 01 at the end with 00
+? 96 98
+> >
+? 95 95
+# we found 01, write 00
+> X <
+# return to the beginning
+< <
+? 101 103
+# hooray, beginning reached
+> >
+!
