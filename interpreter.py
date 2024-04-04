@@ -54,7 +54,7 @@ def dump():
 parser = argparse.ArgumentParser(description="PTM interpreter")
 parser.add_argument('program', type=argparse.FileType('r'), nargs='*', 
                     help='file with a PTM program to interpret', default=stdin)
-parser.add_argument('--input', type=str, help='input binary string')
+parser.add_argument('--input', type=str, help='input binary string', default='')
 args = parser.parse_args()
 
 cells = deque(encode([1 if c == "1" else 0 for c in args.input]))
