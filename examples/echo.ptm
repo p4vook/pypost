@@ -7,11 +7,11 @@
 ? 8 10
 > >
 ? 7 7
-> > X > X > X < < < < < <
+> > X > V < < < < <
 ? 12 14
 < < 
 ? 11 11
-> >
+> > > >
 # main program start
 # if we reached end, copy the final bit and stop
 ? 18 72
@@ -29,7 +29,7 @@
 >
 ? 24 24
 # we are at an actual end (01), write 1101
-< < V > > X > V < < <
+< V > > X > V < < <
 # return back until we get to the 01 placeholder
 ? 35 37
 < <
@@ -40,7 +40,7 @@
 <
 ? 35 35
 # we found the placeholder, overwrite it to 11
-V > >
+< V > >
 # continue our cycle
 ? 15 15
 # we need to copy 10
@@ -55,9 +55,9 @@ V < X > >
 >
 ? 50 50
 # we are at an actual end (01), write 1001
-< < V > X > X > V < < <
+< V > X > X > V < < <
 # return back until we get to the 01 placeholder
-? 61 65
+? 61 63
 < <
 ? 60 60
 >
@@ -66,7 +66,7 @@ V < X > >
 <
 ? 61 61
 # we found the placeholder, overwrite it to 10
-V > X >
+< V > X >
 # continue our cycle
 ? 15 15
 # we reached the end
