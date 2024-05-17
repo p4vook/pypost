@@ -1,6 +1,9 @@
 # Post-Turing machine interpreter written in Python
 
 [![Python CI](https://github.com/p4vook/pypost/actions/workflows/tests.yml/badge.svg?branch=master)](https://github.com/p4vook/pypost/actions/workflows/tests.yml)
+[![Tests](https://p4vook.github.io/pypost/badges/tests.svg)](https://p4vook.github.io/pypost/reports/junit/)
+[![Coverage](https://p4vook.github.io/pypost/badges/coverage.svg)](https://p4vook.github.io/pypost/reports/coverage/)
+[![Flake8](https://p4vook.github.io/pypost/badges/flake8.svg)](https://p4vook.github.io/pypost/reports/flake8/)
 
 ## Syntax
 
