@@ -1,5 +1,7 @@
 # Post-Turing machine interpreter written in Python
 
+[![Python CI](https://github.com/p4vook/pypost/actions/workflows/tests.yml/badge.svg?branch=master)](https://github.com/p4vook/pypost/actions/workflows/tests.yml)
+
 ## Syntax
 
 This syntax tries to be as close as possible to the original Post-Turing machine, while still being programmable.
