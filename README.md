@@ -1,5 +1,9 @@
 # Post-Turing machine interpreter written in Python
 
+## How to use
+
+`python3 interpreter.py <program.ptm> --input <input>`
+
 ## Syntax
 
 This syntax tries to be as close as possible to the original Post-Turing machine, while still being programmable.
