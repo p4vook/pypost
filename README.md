@@ -5,6 +5,10 @@
 [![Coverage](https://p4vook.github.io/pypost/badges/coverage.svg)](https://p4vook.github.io/pypost/reports/coverage/)
 [![Flake8](https://p4vook.github.io/pypost/badges/flake8.svg)](https://p4vook.github.io/pypost/reports/flake8/)
 
+## How to use
+
+`python3 interpreter.py <program.ptm> --input <input>`
+
 ## Syntax
 
 This syntax tries to be as close as possible to the original Post-Turing machine, while still being programmable.
